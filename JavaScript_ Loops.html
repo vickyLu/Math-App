@@ -1,0 +1,462 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0045)http://webcheatsheet.com/javascript/loops.php -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta name="verify-v1" content="HzLBzxJ0BdYFxvAuAyC7zLeL4sVyXzN4EIbhiihJv2M=">
+
+<meta name="ROBOTS" content="ALL">
+<meta name="keywords" content="tutorial,html,javascript,asp,vbscript,sql,php,authoring,programming,training,learning,beginner&#39;s guide,howto,reference,examples,samples,source code,tags,demos,tips,links,FAQ,tag list,forms,frames,color table,webcheatsheet,active server pages,internet,database,development,Web building,Webmaster,html guide,php hypertext preprocessor, structured query language"><title>JavaScript: Loops</title>
+<link href="./JavaScript_ Loops_files/styles.css" type="text/css" rel="stylesheet"><link href="./JavaScript_ Loops_files/template_styles.css" type="text/css" rel="stylesheet"><script async="" type="text/javascript" src="./JavaScript_ Loops_files/ca-pub-2479335859954442.js"></script><script src="./JavaScript_ Loops_files/ddnmenu.js" type="text/javascript"></script>
+<script src="./JavaScript_ Loops_files/jquery.js" type="text/javascript"></script>
+<script src="./JavaScript_ Loops_files/rounded_corners.inc.js" type="text/javascript"></script>
+<script src="./JavaScript_ Loops_files/bull.js" type="text/javascript"></script>
+<script type="text/javascript" async="" src="./JavaScript_ Loops_files/bsa.js"></script></head>
+
+<body link="#3f4ba2" alink="#757575" vlink="#B77D9F" text="#000000" data-pinterest-extension-installed="cr1.36">
+
+<!-- BuySellAds.com Ad Code -->
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = '//s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<!-- END BuySellAds.com Ad Code -->
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tbody><tr>
+		<td>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tbody><tr>
+			<td width="0%"><img src="./JavaScript_ Loops_files/top_1.jpg" alt="" width="206" height="104"></td>
+			<td width="0%"><a href="http://webcheatsheet.com/"><img src="./JavaScript_ Loops_files/top_2.jpg" alt="Home page" width="206" height="104" border="0"></a></td>
+			<td width="0%"><img src="./JavaScript_ Loops_files/top_3.jpg" width="206" height="104" alt=""></td>
+			<td width="100%" background="./JavaScript_ Loops_files/top_4_back.jpg"><img src="./JavaScript_ Loops_files/1.gif" alt="" width="1" height="1"></td>
+			<td background="./JavaScript_ Loops_files/top_4_back.jpg">	</td>
+		</tr>
+</tbody></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tbody><tr>
+			<td width="0%"><img src="./JavaScript_ Loops_files/top_1_1.jpg" alt="" width="206" height="27"></td>
+			<td width="0%"><img src="./JavaScript_ Loops_files/top_2_1.jpg" alt="" width="117" height="27"></td>
+			<td width="100%" bgcolor="#697B9F"><table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td width="0%">&nbsp;</td><td><table border="0" cellspacing="0" cellpadding="0" height="27"><tbody><tr><td onmouseover="show(0)" onmouseout="hidden(0)"><a href="http://webcheatsheet.com/index.php" class="topmenu"><nobr>&nbsp;Home&nbsp;</nobr></a></td><td width="0%"><img src="./JavaScript_ Loops_files/top_menu_divider.gif" width="15" height="19" alt=""></td></tr></tbody></table></td><td><table border="0" cellspacing="0" cellpadding="0" height="27"><tbody><tr><td onmouseover="show(1)" onmouseout="hidden(1)"><a href="http://webcheatsheet.com/asp/" class="topmenu"><nobr>&nbsp;ASP&nbsp;</nobr></a></td><td width="0%"><img src="./JavaScript_ Loops_files/top_menu_divider.gif" width="15" height="19" alt=""></td></tr></tbody></table></td><td><table border="0" cellspacing="0" cellpadding="0" height="27"><tbody><tr><td onmouseover="show(2)" onmouseout="hidden(2)"><a href="http://webcheatsheet.com/php/" class="topmenu"><nobr>&nbsp;PHP&nbsp;</nobr></a></td><td width="0%"><img src="./JavaScript_ Loops_files/top_menu_divider.gif" width="15" height="19" alt=""></td></tr></tbody></table></td><td><table border="0" cellspacing="0" cellpadding="0" height="27"><tbody><tr><td onmouseover="show(3)" onmouseout="hidden(3)"><a href="http://webcheatsheet.com/sql/" class="topmenu"><nobr>&nbsp;SQL&nbsp;</nobr></a></td><td width="0%"><img src="./JavaScript_ Loops_files/top_menu_divider.gif" width="15" height="19" alt=""></td></tr></tbody></table></td><td><table border="0" cellspacing="0" cellpadding="0" height="27"><tbody><tr><td onmouseover="show(4)" onmouseout="hidden(4)"><a href="http://webcheatsheet.com/html/" class="topmenu"><nobr>&nbsp;HTML&nbsp;</nobr></a></td><td width="0%"><img src="./JavaScript_ Loops_files/top_menu_divider.gif" width="15" height="19" alt=""></td></tr></tbody></table></td><td><table border="0" cellspacing="0" cellpadding="0" height="27"><tbody><tr><td onmouseover="show(5)" onmouseout="hidden(5)"><a href="http://webcheatsheet.com/javascript/" class="topmenuact"><nobr>&nbsp;JavaScript&nbsp;</nobr></a></td><td width="0%"><img src="./JavaScript_ Loops_files/top_menu_divider.gif" width="15" height="19" alt=""></td></tr></tbody></table></td><td><table border="0" cellspacing="0" cellpadding="0" height="27"><tbody><tr><td onmouseover="show(6)" onmouseout="hidden(6)"><a href="http://webcheatsheet.com/search/index.php" class="topmenu"><nobr>&nbsp;Search&nbsp;</nobr></a></td><td width="0%"><img src="./JavaScript_ Loops_files/top_menu_divider.gif" width="15" height="19" alt=""></td></tr></tbody></table><div style="position:relative; width: 100%;"><div onmouseover="show(6)" onmouseout="hidden(6)" id="menu6" style="visibility: hidden; position: absolute; z-index: +1; top: 0px;"><table border="0" cellspacing="0" cellpadding="0" width="110"><tbody><tr><td bgcolor="#E6EFF7" valign="top"><table border="0" cellspacing="0" cellpadding="0" width="100%"><tbody><tr valign="top"><td nowrap="" onmouseover="this.className=&#39;popupmenuact&#39;" onmouseout="this.className=&#39;popupmenu&#39;" onclick="window.location=&#39;/search/index.php&#39;" class="popupmenu" style="cursor: hand"><nobr><a href="http://webcheatsheet.com/search/index.php" style="text-decoration: none;"><font class="popupmenutext">Search</font></a></nobr></td></tr><tr valign="top"><td nowrap="" onmouseover="this.className=&#39;popupmenuact&#39;" onmouseout="this.className=&#39;popupmenu&#39;" onclick="window.location=&#39;/search/map.php&#39;" class="popupmenu" style="cursor: hand"><nobr><a href="http://webcheatsheet.com/search/map.php" style="text-decoration: none;"><font class="popupmenutext">Site Map</font></a></nobr></td></tr></tbody></table></td></tr></tbody></table></div></div></td><td><table border="0" cellspacing="0" cellpadding="0" height="27"><tbody><tr><td onmouseover="show(7)" onmouseout="hidden(7)"><a href="http://webcheatsheet.com/feedback.php" class="topmenu"><nobr>&nbsp;Contact&nbsp;</nobr></a></td><td width="0%"><img src="./JavaScript_ Loops_files/1.gif" width="1" height="27" alt=""></td></tr></tbody></table></td><td width="100%"><img src="./JavaScript_ Loops_files/1.gif" width="50" height="1" alt=""></td><td><table border="0" cellspacing="0" cellpadding="0" height="27"><tbody><tr><td><a class="topmenu" href=""><nobr><div id="rtoc">&nbsp;</div></nobr></a></td></tr></tbody></table></td></tr></tbody></table></td>
+		</tr>
+		<!--
+		<tr>
+			<td width="0%"><img src="/bitrix/templates/template1/images/top_1_2.jpg" alt="" width="206" height="30"></td>
+			<td width="0%"><img src="/bitrix/templates/template1/images/top_2_2.jpg" alt="" width="117" height="30"></td>
+			<td width="100%" align="right"><table cellpadding="0" cellspacing="0" border="0" width="0%">
+	<tr>	
+					<td align="center" width="0%"><img src="/bitrix/templates/template1/images/1.gif" width="10" height="11" alt=""></td>			
+	</tr>
+</table>
+</td>
+		</tr>
+		-->
+</tbody></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tbody><tr>
+			<td style="width:160px" valign="top" bgcolor="#F5F6F9">
+											<div class="maxBountyAds">
+
+<script async="" src="./JavaScript_ Loops_files/adsbygoogle.js"></script>
+<!-- TopLeft -->
+<ins class="adsbygoogle" style="display:inline-block;width:200px;height:200px" data-ad-client="ca-pub-2479335859954442" data-ad-slot="1334575090" data-adsbygoogle-status="done"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:200px;margin:0;padding:0;position:relative;visibility:visible;width:200px;background-color:transparent"><ins id="aswift_0_anchor" style="display:block;border:none;height:200px;margin:0;padding:0;position:relative;visibility:visible;width:200px;background-color:transparent"><iframe width="200" height="200" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+						</div>	
+						<div class="searchbody"><strong class="searchhead">Search</strong><br>
+						
+
+	<table border="0" cellspacing="0" cellpadding="2" align="center">
+	<form action="http://webcheatsheet.com/search/index.php"></form>
+		<tbody><tr>	
+			<td align="center"><input type="text" name="q" value="" size="15" maxlength="50" class="inputfield"></td>
+		</tr>
+		<tr>
+			<td align="right"><input name="s" type="submit" value="Search" width="20" height="20" class="inputbuttonflat"></td>
+		</tr>
+	
+	</tbody></table>
+	<div class="smallfont" style="margin: 10 0 5 10;">or browse <a href="http://webcheatsheet.com/tags/" style="text-decoration:underline;">popular tags</a></div>	
+							</div>
+												
+						<div style="margin:4px;">
+						<title>JavaScript Tutorial</title><div class="categories"><strong class="one">JS Tutorial</strong> 
+<ul>
+<li><a class="link" href="http://webcheatsheet.com/javascript/what_is_javascript.php">What is JavaScript?</a> 
+</li><li><a class="link" href="http://webcheatsheet.com/javascript/what_javascript_can_do.php">What can JavaScript do?</a> 
+</li><li><a class="link" href="http://webcheatsheet.com/javascript/first_script.php">The first script</a> 
+</li><li><a class="link" href="http://webcheatsheet.com/javascript/variables.php">Variables</a> 
+</li><li><a class="link" href="http://webcheatsheet.com/javascript/arrays.php">Arrays</a> 
+</li><li><a class="link" href="http://webcheatsheet.com/javascript/functions.php">Functions</a> 
+</li><li><a class="link" href="./JavaScript_ Loops_files/JavaScript_ Loops.html">Loops</a> 
+</li><li><a class="link" href="http://webcheatsheet.com/javascript/if_else_switch.php">Conditional Statements</a> 
+</li><li><a class="link" href="http://webcheatsheet.com/javascript/form_validation.php">Form Validation</a> 
+</li><li><a class="link" href="http://webcheatsheet.com/javascript/disable_enter_key.php">How to disable the Enter key</a> 
+</li><li><a class="link" href="http://webcheatsheet.com/javascript/set_focus_first_available_form_control.php">Set Focus to First Available Form Control</a> 
+
+</li><li><a class="link" href="http://webcheatsheet.com/javascript/show_different_content_to_search_engine_visitors.php">Show different content to search engine visitors</a></li><li><a class="link" href="http://webcheatsheet.com/javascript/bbcode_editor.php">BBCode editor</a>
+</li></ul>
+<ul>
+<li><a class="link" target="_blank" href="http://webcheatsheet.com/tryit/?section=javascript">Try It Online</a>
+</li></ul>
+</div>						</div>
+						<div class="subbody"> <strong class="subhead"> Subscription</strong> 
+<br>
+<p>Sign up for the free email newsletter for new tips, tutorials and more. Enter your email address below, and then click the button.</p>
+<p><a href="http://www.webcheatsheet.com/privacy.php">Privacy Policy</a></p>
+	<table border="0" cellspacing="0" cellpadding="2" align="center">
+		<form method="post" action="http://www.webcheatsheet.com/subscription.php"></form>
+			<input type="hidden" name="action" value="process">
+			<tbody><tr>	
+				<td align="center"><input type="text" name="email" value="" size="20" maxlength="50" class="inputfield"></td>
+			</tr>
+			<tr>
+				<td align="right">
+					<input name="subs" type="submit" value="Subscribe" width="20" height="20" class="inputbuttonflat">
+				</td>
+			</tr>
+		
+	</tbody></table>
+</div>						<div style="margin:4px;width:171px">
+							<span style="position:relative; top:0; left:0;"><a href="http://feeds2.feedburner.com/WebcheatsheetcomRssFeed"><img style="border: 0px;" src="./JavaScript_ Loops_files/rss.png" alt="RSS" title="Subscribe via RSS"></a></span>
+							<span style="position:relative; top:10; left:5;"><a href="http://twitter.com/webcheatsheet"><img style="border: 0px;" src="./JavaScript_ Loops_files/twitter.png" alt="Twitter" title="Follow us on Twitter"></a></span>
+						</div>
+
+	
+																							</td>			
+			<td width="0%" valign="top"><img src="./JavaScript_ Loops_files/1.gif" alt="" width="12" height="1"><br>
+				<script language="javascript1.2">
+					nav=navigator.appName;
+					if (nav!= "Netscape") {var w = document.body.clientHeight;}else{var w = window.innerHeight;}
+					document.write('<img name="line" src="/bitrix/templates/template1/images/1.gif" width="1" height="'+(w-111)+'">');
+				</script><img name="line" src="./JavaScript_ Loops_files/1.gif" width="1" height="518"></td>
+			<td width="100%" valign="top">
+					<!--
+					<table cellpadding="0" cellspacing="0" border="0" width="100%">
+						<tr>
+							<td width="100%"><h1><a href="/" class='chain'>Home</a><font class="chain">&nbsp;/&nbsp;</font><a href="/javascript/" class='chain'>Javascript</a></h1></td>
+							<td width="0%" valign="top">
+							<table width="0%">
+								<tr>
+								   <td> </td>
+								</tr>
+							</table></td>
+						</tr>
+					</table>
+					-->
+													
+					<p><table style="margin-top:16px">
+			<tbody>
+
+			<tr><td colspan="3">
+<script type="text/javascript"><!--
+google_ad_client = "pub-2479335859954442";
+/* 728x90, created 6/10/10 */
+google_ad_slot = "9327881701";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript" src="./JavaScript_ Loops_files/show_ads.js">
+</script><ins id="aswift_1_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><ins id="aswift_1_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><iframe width="728" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;"></iframe></ins></ins>
+
+		
+			</td></tr>			
+			<tr>
+				<td class="contentheading" width="640" style="white-space: nowrap"><h1>JavaScript: Loops</h1>						</td>
+							
+							<td class="buttonheading" align="right" width="20">
+					<a href="http://webcheatsheet.com/javascript/loops.php?print=Y" target="_blank" title="Print version"><img src="./JavaScript_ Loops_files/printButton.png" alt="Print" name="Print" align="middle" border="0"></a>
+				</td>
+<td class="buttonheading" align="right" width="1">
+<!-- AddThis Button BEGIN -->
+<!--<a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&pub=xa-4ae6070b3f86b937"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4ae6070b3f86b937"></script>-->
+<!-- AddThis Button END -->
+</td>
+						</tr>
+			</tbody></table><br>
+<script type="text/javascript"><!--
+google_ad_client = "pub-2479335859954442";
+/* 728x15, created 10/26/09 */
+google_ad_slot = "8065650230";
+google_ad_width = 728;
+google_ad_height = 15;
+//-->
+</script>
+<script type="text/javascript" src="./JavaScript_ Loops_files/show_ads.js">
+</script><ins id="aswift_2_expand" style="display:inline-table;border:none;height:15px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><ins id="aswift_2_anchor" style="display:block;border:none;height:15px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><iframe width="728" height="15" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;"></iframe></ins></ins>
+</p><!-- google_ad_section_start -->
+<table width="800"><tbody><tr><td width="640" class="article" valign="top">
+<table class="article" cellspacing="1" cellpadding="1">
+
+<tbody><tr>
+<td>
+<p>JavaScript performs several types of repetitive operations, called "looping". Loops are set of instructions used to repeat the same block of code till a specified condition returns false or true depending on how you need it. To control the loops you can use counter variable that&nbsp; increments or decrements with each repetition of the loop. </p>
+<p>JavaScript supports two loop statements: for and while. The For statements are best used when you want to perform a loop&nbsp;a specific number of times. The While statements are best used to perform a loop an undetermined number of times. In addition, you can use the break and continue statements within loop statements.&nbsp;</p>
+<ul class="square">
+<li><a class="related" href="http://webcheatsheet.com/javascript/loops.php#for">The For Loop</a> 
+</li><li><a class="related" href="http://webcheatsheet.com/javascript/loops.php#while">The While Loop</a> 
+</li><li><a class="related" href="http://webcheatsheet.com/javascript/loops.php#break&continue">Break and Continue Statements</a> </li></ul>
+<p class="articleheader"><a name="for"></a>The For Loop</p>
+<p>The For loop is executed till a specified condition returns false. It has basically the same syntax then in other languages. It takes 3 arguments and looks as follows:&nbsp;</p>
+<div class="jscode">for (initialization; condition; increment) <br>{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>&nbsp;&nbsp; // statements<br>}</div>
+<p>When the For loop executes, the following occurs:</p>
+<ul class="decimal">
+<li>The initializing expression is executed. This expression usually initializes one or more loop counters, but the syntax allows an expression of any degree of complexity. 
+</li><li>The condition expression is evaluated. If the value of condition is true, the loop statements execute. If the value of condition is false, the for loop terminates. 
+</li><li>The update expression increment executes. 
+</li><li>The statements execute, and control returns to step 2.</li></ul>
+<p>The following example generates a multiplication table 2 through 9. Outer loop is responsible for generating a list of dividends, and inner loop will be responsible for generating lists of dividers for each individual number:</p>
+<div class="jscode">
+<div style="float:right;"><select class="inputselect action"><option selected="">Select Action</option><option>Select All</option><option value="loops_1">Try It</option></select></div>
+&lt;script type="text/javascript"&gt;<br><br>document.write("&lt;h1&gt;Multiplication table&lt;/h1&gt;");<br>document.write("&lt;table border=2 width=50%"); <br><br>for (var i = 1; i &lt;= 9; i++ ) {&nbsp;&nbsp; <span class="comment">//this is the outer loop</span><br>&nbsp;&nbsp;document.write("&lt;tr&gt;");<br>&nbsp; document.write("&lt;td&gt;" + i + "&lt;/td&gt;");<br>&nbsp; <br>&nbsp;&nbsp; for ( var j = 2; j &lt;= 9; j++ ) {<span class="comment"> // inner loop</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.write("&lt;td&gt;" + i * j + "&lt;/td&gt;");<br>&nbsp;&nbsp;&nbsp; }<br><br>&nbsp; &nbsp;document.write("&lt;/tr&gt;");<br>} <br><br>document.write("&lt;/table&gt;"); <br><br>&lt;/script&gt;</div>
+<p>Next example&nbsp;creates a function containing&nbsp;the For statement that counts the number of selected options in a list. The For statement declares the variable i and initializes it to zero. It checks that i is less than the number of options in the Select object, performs the succeeding if statement, and increments i by one after each pass through the loop.</p>
+<div class="jscode">
+<div style="float:right;"><select class="inputselect action"><option selected="">Select Action</option><option>Select All</option><option value="loops_2">Try It</option></select></div>
+&lt;script type="text/javascript"&gt;<br><br>function howMany (selectItem) {<br>&nbsp; var numberSelected=0<br><br>&nbsp; for (var i=0; i &lt; selectItem.options.length; i++) {<br>&nbsp;&nbsp;&nbsp; &nbsp;if (selectItem.options[i].selected == true)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; numberSelected++;<br>&nbsp;&nbsp;}<br><br>&nbsp; return numberSelected<br>}<br><br>&lt;/script&gt;<br><br>&lt;form name="selectForm"&gt;<br>&lt;p&gt;Choose some&nbsp;book types, then click the button below:&lt;/p&gt;<br>&lt;select multiple name="bookTypes" size="8"&gt;<br>&lt;option selected&gt; Classic &lt;/option&gt;<br>&lt;option&gt; Information Books &lt;/option&gt;<br>&lt;option&gt; Fantasy &lt;/option&gt;<br>&lt;option&gt; Mystery &lt;/option&gt;<br>&lt;option&gt; Poetry &lt;/option&gt;<br>&lt;option&gt; Humor &lt;/option&gt;<br>&lt;option&gt; Biography &lt;/option&gt;<br>&lt;option&gt; Fiction &lt;/option&gt;<br>&lt;/select&gt;<br>&lt;input type="button" value="How many are selected?" <br>onclick="alert ('Number of options selected: ' + howMany(document.selectForm.bookTypes))"&gt;<br>&lt;/form&gt;</div>
+<script type="text/javascript">
+
+function howMany (selectItem) {
+var numberSelected=0
+
+for (var i=0; i < selectItem.options.length; i++) {
+   if (selectItem.options[i].selected == true)
+      numberSelected++
+}
+
+return numberSelected
+}
+
+</script>
+
+<p>
+</p><form name="selectForm">
+<p>Choose some&nbsp;book types and&nbsp;click the button below to see what the script in the preceding example does:</p>
+<p><select class="inputselect" multiple="" size="8" name="bookTypes"> <option selected="">Classic</option> <option>Information Books</option> <option>Fantasy</option> <option>Mystery</option> <option>Poetry</option> <option>Humor</option> <option>Biography</option> <option>Fiction</option></select> </p>
+<p><input class="inputbutton" onclick="alert (&#39;Number of options selected: &#39; + howMany(document.selectForm.bookTypes))" type="button" value="How many are selected?"></p></form>
+<p>At last let's consider the example that uses 2 variables. One to add all the numbers from 1 to 10. The other to add only the even numbers. </p>
+<div class="jscode">
+<div style="float:right;"><select class="inputselect action"><option selected="">Select Action</option><option>Select All</option><option value="loops_3">Try It</option></select></div>
+&lt;script type="text/javascript"&gt;<br><br><span class="comment"><font style="BACKGROUND-COLOR: #fafcfe" color="#0c3e64">var total = 0;<br>var even = 0;<br><br>for ( x = 1, y = 1; x &lt;= 10; x++, y++ )&nbsp;{<br>&nbsp; if ( ( y % 2 ) == 0 ) {<br>&nbsp;&nbsp;&nbsp; even = even + y;<br>&nbsp; }<br>&nbsp; total = total + x;<br>}<br><br>document.write ( "The total&nbsp;sum: " + total + "&lt;br&gt;");<br>document.write ( "The&nbsp;sum of even values: " + even );</font></span><br><br>&lt;/script&gt;</div>
+<p><img height="10" src="./JavaScript_ Loops_files/uparrow.gif" width="10" border="0"><a href="http://webcheatsheet.com/javascript/loops.php#top"><font color="#999999" size="2">Back to top</font></a></p>
+<p class="articleheader">The While Loop<a name="while"></a></p>
+<p>The While loop is another commonly used loop after the For loop. The while statement repeats a loop as long as a specified condition evaluates to true. If the condition becomes false, the statements within the loop stop executing and control passes to the statement following the loop. The while statement looks as follows:</p>
+<div class="jscode">while (condition) <br>{<br>&nbsp; // statements<br>}</div>
+<p>The example below defines a loop that starts with i=0. The loop will continue to run as long as i is less than, or equal to 10. i will increase by 1 each time the loop runs.</p>
+<div class="jscode">
+<div style="float:right;"><select class="inputselect action"><option selected="">Select Action</option><option>Select All</option><option value="loops_4">Try It</option></select></div>
+&lt;script type="text/javascript"&gt;<br><br>var i=0;<br><br>while (i&lt;=10) <span class="comment">//Output the values from&nbsp;0 to 10</span><br>{<br>&nbsp; document.write(i + "&lt;br&gt;")<br>&nbsp;&nbsp;i++;<br>}<br><br>&lt;/script&gt; </div>
+<p>Now let's consider a more useful example which creates&nbsp;drop-down lists of days, months and years. You can use this code for registration form, for example. </p>
+<div class="jscode">
+<div style="float:right;"><select class="inputselect action"><option selected="">Select Action</option><option>Select All</option><option value="loops_5">Try It</option></select></div>
+&lt;script type="text/javascript"&gt;<br><br>var month_array = new Array(); <br><br>month_array[0] = "January";<br>month_array[1] = "February";<br>month_array[2] = "March";<br>month_array[3] = "April";<br>month_array[4] = "May"; <br>month_array[5] = "June";<br>month_array[6] = "July";<br>month_array[7] = "August";<br>month_array[8] = "September";<br>month_array[9] = "October";<br>month_array[10] = "November";<br>month_array[11] = "December";<br><br>document.write('&lt;select name="day"&gt;');<br>var i = 1;<br>while ( i &lt;= 31 ) {<br>&nbsp;&nbsp; document.write('&lt;option value=' + i + '&gt;' + i + '&lt;/option&gt;');<br>&nbsp;&nbsp;&nbsp;&nbsp;i++;<br>}<br>document.write('&lt;/select&gt;');<br><br>document.write('&lt;select name="month"&gt;');<br>var i = 0;<br>while ( i &lt;= 11 ) {<br>&nbsp;&nbsp;&nbsp;document.write('&lt;option value=' + i + '&gt;' + month_array[i] + '&lt;/option&gt;');&nbsp;&nbsp;&nbsp; <br>&nbsp;&nbsp; i++;<br>}<br>document.write('&lt;/select&gt;');<br><br>document.write('&lt;select name="year"&gt;');<br>var i = 1900;<br>while ( i &lt;= 2005 ) {&nbsp;&nbsp;&nbsp; <br>&nbsp;&nbsp; document.write('&lt;option value=' + i + '&gt;' + i + '&lt;/option&gt;');&nbsp;&nbsp;&nbsp; <br>&nbsp;&nbsp; i++;<br>}<br>document.write('&lt;/select&gt;');<br><br>&lt;/script&gt;</div>
+<p>Note: Make sure the condition in a loop eventually becomes false; otherwise, the loop will never terminate.</p>
+<p><img height="10" src="./JavaScript_ Loops_files/uparrow.gif" width="10" border="0"><a href="http://webcheatsheet.com/javascript/loops.php#top"><font color="#999999" size="2">Back to top</font></a></p>
+<p class="articleheader">Break and Continue Statements<a name="break&amp;continue"></a></p>
+<p>Sometimes you may want to let the loops start without any condition, and allow the statements inside the brackets to decide when to exit the loop. There are two special statements that can be used inside loops: break and continue. The break statement terminates the current while or for loop and continues executing the code that follows after the loop (if any). A continue statement terminates execution of the block of statements in a while or for loop and continues execution of the loop with the next iteration.</p>
+<p>Example below shows how to use these statements:</p>
+<div class="jscode">
+<div style="float:right;"><select class="inputselect action"><option selected="">Select Action</option><option>Select All</option><option value="loops_6">Try It</option></select></div>
+&lt;script type="text/javascript"&gt; <br><br>document.write("&lt;p&gt;&lt;b&gt;Example of using the break statement:&lt;/b&gt;&lt;/p&gt;");<br><br>var i = 0; <br>for (i=0; i&lt;=10; i++) { <br>&nbsp;&nbsp; if (i==3){break}&nbsp;<br>&nbsp;&nbsp;&nbsp;document.write("The number is " + i);<br>&nbsp;&nbsp; document.write("&lt;br /&gt;"); <br>}<br><br>document.write("&lt;p&gt;&lt;b&gt;Example of using the&nbsp;continue statement:&lt;/b&gt;&lt;p&gt;");<br><br>var i = 0; <br>for (i=0; i&lt;=10; i++) { <br>&nbsp;&nbsp; if (i==3){continue} <br>&nbsp;&nbsp; document.write("The number is " + i); <br>&nbsp;&nbsp; document.write("&lt;br /&gt;") <br>} <br><br>&lt;/script&gt; </div>
+<p><img height="10" src="./JavaScript_ Loops_files/uparrow.gif" width="10" border="0"><a href="http://webcheatsheet.com/javascript/loops.php#top"><font color="#999999" size="2">Back to top</font></a></p>
+<ul></ul>
+<ul></ul></td></tr></tbody></table>
+</td>
+<td width="1" valign="top" style="padding-left: 50px;">
+
+</td></tr></tbody></table>
+
+
+<!-- google_ad_section_end -->
+
+<!--ono-->
+
+
+<!--ono-->
+
+
+<div id="bottom-mb-ads&gt;" <script="" async="" src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+<!-- BottomBanner -->
+<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-2479335859954442" data-ad-slot="2811308297" data-adsbygoogle-status="done"><ins id="aswift_3_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><ins id="aswift_3_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><iframe width="728" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_3" name="aswift_3" style="left:0;position:absolute;top:0;"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>'
+
+<br><br><br>
+
+<p><span class="smallfont"><b>Tags: </b> </span><a class="smallfont" href="http://www.webcheatsheet.com/tags/search.php?q="></a> </p><p><span class="smallfont"><b>Add To: </b> </span>
+<a class="smallfont" target="_blank" href="javascript: location.href='http://www.dzone.com/links/add.html?url='+encodeURIComponent('http://webcheatsheet.com/javascript/loops.php')+'&title=JavaScript: Loops'"><img style="border: 0px;" height="12" alt="Add to dzone" src="./JavaScript_ Loops_files/dzone.jpg" width="12"> dzone</a> | <a class="smallfont" target="_blank" href="javascript:location.href='http://digg.com/submit?phase=3&url='+encodeURIComponent('http://webcheatsheet.com/javascript/loops.php')+'&title=JavaScript: Loops'"><img style="border: 0px;" height="12" alt="Digg this" src="./JavaScript_ Loops_files/digg.jpg" width="11"> digg </a> | <a class="smallfont" target="_blank" href="javascript: location.href='http://del.icio.us/post?v=4;url='+encodeURIComponent('http://webcheatsheet.com/javascript/loops.php')+';title=JavaScript: Loops'"><img style="border: 0px;" height="12" alt="Add to del.icio.us" src="./JavaScript_ Loops_files/del-icio-us.jpg" width="12"> del.icio.us</a> | 
+<a class="smallfont" href="javascript:location.href='http://www.stumbleupon.com/submit?url='+encodeURIComponent('http://webcheatsheet.com/javascript/loops.php')+'&title=JavaScript: Loops'"><img style="border: 0px;" height="12" alt="Stumble it" src="./JavaScript_ Loops_files/stumbleit.gif" width="12"> stumbleupon</a> </p>
+
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+	$("#tabcomment").click(function() {
+		distortTabs("tabcomment");
+		$.get("/bitrix/templates/template1/scripts/comments.php", {selfURL: "http://www.webcheatsheet.com/javascript/loops.php"},
+			function(data) { 
+				$("div#tabcontent").html(data); 
+			}
+		);
+		return false;
+	});
+	$("#tabblogit").click(function() {
+		distortTabs("tabblogit");
+		$("div#tabcontent").load('/bitrix/templates/template1/scripts/blogit.php', {selfURL: "http://www.webcheatsheet.com/javascript/loops.php"});	
+		return false;
+	});
+
+	$("#tabwrite").click(function() {
+		distortTabs("tabwrite");
+		$("div#tabcontent").load('/bitrix/templates/template1/scripts/writeforus.php');	
+		return false;
+	});
+
+	$("#tabauthor").click(function() {
+		distortTabs("tabauthor");
+		$("div#tabcontent").load('/bitrix/templates/template1/scripts/aboutauthor.php', {selfURL: "http://www.webcheatsheet.com/javascript/loops.php"});	
+		return false;
+	});
+	
+	function distortTabs(tab) {
+		$.each( ["tabcomment","tabblogit","tabwrite","tabauthor"], function(i, n){
+			$("#"+n).removeClass("active");
+			$("#"+n).html("<a href=\"#\">" + $("#"+n).text() + "</a>");
+		})
+		$("#"+tab).addClass("active");
+		$("#"+tab).html("<span>" + $("#"+tab).text() + "</span>");
+		$("div#tabcontent").html("<div class=\"commentsuccess\"><span style=\"position:relative; top:0; left:0;\"><img src=\"/images/animated_loading.gif\"/></span><span style=\"position:relative; top:-4; left:10;\">Loading ...</span></div>");
+	}
+	
+	//on page load trigger the click event of comment's tab
+	$("#tabnav").hide();
+	$("#tabcomment").click();
+});
+</script>
+
+<div id="tabnav" style="display: none;">
+  <ul>
+	<li id="tabcomment" class="active"><span>Comments 
+ 	</span></li>
+	<!--<li id="tabblogit"><a href="#">Blog It</a></li> -->
+    <!--<li id="tabwrite"><a href="#">Write for us</a></li>
+	<li id="tabauthor"><a href="#">About the Author</a></li>-->
+  </ul>
+  <br>
+</div>
+
+
+<div id="tabcontent" style="width: 750px;">
+<!--
+<div id="commenthead">
+	<span class="commentheadoption">
+		<A id="showcomments" class="smallfont" style="text-decoration: underline;" onclick="showHideComments(); return false;" href="#">Hide Comments</A> | 
+		<A id="addcomment" class="smallfont" style="text-decoration: underline;" onclick="showHideForm(); return false;" href="#">Add New</A>
+	</span>
+	<div class="commentrss">
+		<span style="position:relative; top:-16; left:0;"><a class="smallfont" style="text-decoration:underline;" href="http://www.webcheatsheet.com/rsscomments.php?q=46">Subscription<a></a></span><span style="position:relative; top:-13; left:5;"><a href="http://www.webcheatsheet.com/rsscomments.php?q=46"><img style="border: 0px;" src="/images/feed-icon16x16.png" alt="[RSS]" title="Subscribe" /></a></span>
+	</span>
+</div>
+-->
+
+<div id="commentform" style="display: none;">
+<form name="form1" method="post" action="">
+<input type="hidden" id="action" name="action" value="process">
+<div class="smallfont" style="width: 500px; background-color:#EFEFEF; border: solid 1px #C8C8C8; margin: 10; padding:10;">HTML tags and other related characters will be stripped out of comments.<br>E-Mail address will not be displayed and will only be used for E-Mail notifications.</div>
+<table style="margin-left: 10;">
+<tbody><tr><td>
+</td></tr><tr>
+	<td align="left">
+		<label for="name">Your Name <font color="red">*</font></label>
+	</td>
+	<td>
+		<input class="inputfield" type="text" id="name" name="name" value="" maxlength="64" size="32">
+	</td>
+</tr>
+<tr>
+	<td align="left">
+		<label for="EMAIL">E-Mail Address</label>
+	</td>
+	<td>
+		<input class="inputfield" type="text" id="email" name="email" value="" maxlength="64" size="32">
+	</td>
+</tr>
+<tr>
+	<td align="left" valign="top">
+		<label for="comments">Comments <span style="color: red;">*</span></label>
+	</td>
+	<td>
+		<textarea class="inputtextarea" style="margin: 2px;" id="comments" name="comments" rows="10" cols="70"></textarea>
+	</td>
+</tr>
+<!--<tr>
+	<td align="left">
+		<label for="captcha">Captcha</label>
+	</td>
+	<td>
+		<input class="inputfield" type="text" id="captcha" name="captcha" value="" maxlength="64" size="32">
+	</td>
+	<td> 
+		<img id="captcha" src="/bitrix/templates/template1/scripts/captcha_image.php" />
+	</td>
+</tr>-->
+<tr>
+	<td>
+		</td><td>
+			<input class="inputbutton" onclick="sendComments();" type="button" value="Post Comment" id="post" name="post">
+		</td>
+	
+</tr>
+
+
+</tbody></table>
+
+</form>
+</div>
+
+<div id="allcomments">
+<div class="commentmain" onmouseover="this.style.background=&#39;#F9F9F9&#39;" onmouseout="this.style.background=&#39;#ffffff&#39;">
+<a name="24b90bc48a67ac676228385a7c71a119"></a><div class="commentbody">in select statement its a good concept...........<br>
+</div>
+<div class="commentbyline"><a href="http://webcheatsheet.com/javascript/loops.php#24b90bc48a67ac676228385a7c71a119">#</a> Posted by irfan | 15 Oct 2009 01:39:15</div>
+</div>
+</div>
+</div><br><br><br>
+</td>
+			<td width="0%" valign="top"><img src="./JavaScript_ Loops_files/1.gif" alt="" width="20" height="1"></td>
+			<td width="0%" valign="top" style="padding: 5px;">
+			 			</td>
+		</tr>
+		<tr>
+			<td width="0%" bgcolor="#F5F6F9" align="right" style="padding: 5px;"><a href="http://www.webcheatsheet.com/" class="copy" style="text-decoration: none"></a><br><font class="copy">Copyright © 2005-2014 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;www.WebCheatSheet.com All Rights Reserved.</font> </td>
+			<td width="0%"> </td>
+			<td width="100%">
+						</td>
+			<td width="0%"> </td>
+			<td width="0%"> </td>
+		</tr>
+</tbody></table></td>
+	</tr>
+</tbody></table>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="./JavaScript_ Loops_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-1888985-2");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+
+
+
+
+<span style="height: 20px; width: 40px; position: absolute; opacity: 0.85; z-index: 8675309; display: none; cursor: pointer; border: none; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAUCAYAAAD/Rn+7AAADU0lEQVR42s2WXUhTYRjHz0VEVPRFUGmtVEaFUZFhHxBhsotCU5JwBWEf1EWEEVHQx4UfFWYkFa2biPJiXbUta33OXFtuUXMzJ4bK3Nqay7m5NeZq6h/tPQ+xU20zugjOxR/+7/O8539+5znnwMtNTExwJtMb3L/fiLv3botCSmUjeCaejTOb39AiFothfHxcFIrHY8RksZjBsckJcOIRMfFsHD/SsbExUYpnI8DR0dGUGjSb0byhEJp5Uqg5CTSzc2CQleJbMEj9/ywBcGRkJEk9DQqouEVQT1sK444yWI9UonmTjGqauVLEIlHa9x8lAMbj8SSpp0rwKGMVvg8P46vbg0C7na8z8JsMcgHe7jlEa+edRhiLy8n/TUMfu6EvLElk+U0WtGwrTrdfAGQf5J8iiK4LVzDU28t8JtMSocf8E+l68myaNFXm/6rXslLK7ay5TOunuRvZWpJuvwAYjUaTpOIWoquuAZ219RTaxKYp9BbjycoN5FvL9qH9TBX5rvoGdJythvXYSTxdtRnWylO/ZdqrLsGwszzhWQ593z2KlAwCYCQSSZJ6ehZ0W7bD9VBLgN0NCqr3qR7R2rBrL3pu3Sb/7nDlz2uy6cG0OXk0GTbZXzNp8trsPAQdTj6frlWzN2DcXZGKQQAMh8NJ6rpyHe+PnkCr/CAFdZyvpfpjuvkifLF9wIt1Wwlo0OHie1RvWrKa93RjzfzliTzPKz3ltB0/Tevmwp14wGUgHAzSOoUEwFAolFaaBSuhnslPRkJexUJtZ6v5HtUeLswl33n1BgEY5fvhs9sJ3FAiT+QYyyvoAQJuD0KBAFRTJNAuz5/s3gJgMBhMJwrVFRThM5tY5zUF/A4X1f2fvQTRLCuBreoim0YmAbqNJryvPEXeeq46kaNdkQ/1HCncbJKPs9ZSv2VHGfWsZ2hfkhKAfr8/pdxWKx4wwD69PmVfNSOL+lr2w+gYqHpWDtXt1xQ8AMlWU0e1lqLd/APRHoP8AJqWrQG9gYxcPMsvSJUvAA4MDKTUJ7MZLaVy8v+qT21tcDx/OemePr0RTkNrur4A6PP5xCgBsL+/X4wiQDpuuVxOeL1eMYmYeDY6sOp0z+B0OuHxeEQhxkJMFosJiSO/UinOI/8Pc+l7KKArAT8AAAAASUVORK5CYII=); background-color: transparent;"></span></body></html>

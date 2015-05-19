@@ -1,0 +1,58 @@
+body {
+  background-image: url(img1.jpg);
+  /*background:#ffc;*/
+  color:#000;
+  font-family:cursive
+}
+ 
+h1 {
+  color:purple;
+  text-shadow: 2px 2px
+  #ff0012;
+  text-align:center;
+  font-size:1.8em;
+  font-weight:bold;
+  margin:0
+  img4-s
+}
+ 
+h2 {
+  text-align:center;
+  text-shadow: 2px 2px
+  #ff0012;
+  border-color: yellow;
+  color:white;
+  font-size:2.5em;
+  font-weight:bold;
+  margin:1em 0 0
+  }
+ 
+p {
+  text-indent:2em;
+  text-align:justify;
+  margin:0
+}
+
+.box1{
+  font-size: 4em;
+}
+
+.questionBox{
+  background-color: pink;
+}
+
+.sumBox{
+  background-color: gold;
+}
+
+.sum1, .sum2, .sum3{
+  font-size: 4em;
+  padding: 5px 10px;
+/*  background-color: purple;*/  
+  background-image: url(img6.jpg);
+  background-size: 70px;
+  margin: 10px;
+  color: gold;
+  background-repeat: repeat-x;
+}
+
